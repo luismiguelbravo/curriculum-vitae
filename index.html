@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
@@ -108,7 +107,7 @@
                 <!--img src="assets/img/test/nombre.png" alt="Circle Image" class="img-fluid"-->
 
 
-                
+
 
                 <h6>Programador</h6>
                 <div class="description text-center">
@@ -183,7 +182,7 @@
                 <!-- section section-tabs -->
                 <!-- section section-white-->
                 <div class="section"
-                    ng-class="{'section-tabs': ($index+1)%2 !== (filteredResults.length%2), 'section-white': ($index+1)%2 === (filteredResults.length%2) }" 
+                    ng-class="{'section-tabs': ($index+1)%2 !== (filteredResults.length%2), 'section-white': ($index+1)%2 === (filteredResults.length%2) }"
                     ng-repeat="empleo in filteredResults = (getEmpleos() | orderBy : '-inicio' | filter:infoEmpleo)">
                     <div class="container">
 
@@ -212,12 +211,12 @@
                         <div ng-bind-html="empleo.descripcion | resaltado:infoEmpleo"></div>
                         <div ng-bind-html="empleo.tecnologia | resaltado:infoEmpleo"></div>
                     </div>
-                  
+
                 </div>
 
                 <div class="section section-white">
                     <div class="container">
-                    </div> 
+                    </div>
                 </div>
 
                 <!--div class="section section-signup page-header" style="background-image: url('./assets/img/code-footer.png');">

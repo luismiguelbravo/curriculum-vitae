@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <!-- link rel="icon" type="image/png" href="assets/img/favicon.png"-->
   <link rel="icon" type="image/png" href="https://github.com/luismiguelbravo/reloj/blob/gh-pages/images/favicon.png?raw=true">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -16,7 +14,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="assets/css/material-kit.css?v=2.0.4" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
   <style>
@@ -92,7 +89,7 @@
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/city-profile.jpg'"></div>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/code-header.png'"></div>
   <div class="main main-raised">
     <div class="profile-content">
       <div class="">
@@ -108,7 +105,7 @@
                 <!--img src="assets/img/test/nombre.png" alt="Circle Image" class="img-fluid"-->
 
 
-                
+
 
                 <h6>Programador</h6>
                 <div class="description text-center">
@@ -124,32 +121,21 @@
                 <a href="https://www.instagram.com/bravo.luismiguel/" target="_blank" class="btn btn-just-icon btn-link btn-twitter">
                   <i class="fa fa-instagram"></i>
                 </a>
-                <a href="https://plus.google.com/+LuisBravo" target="_blank" class="btn btn-just-icon btn-link btn-google">
-                  <i class="fa fa-google"></i>
-                </a>
                 <a href="https://github.com/luismiguelbravo" target="_blank" class="btn btn-just-icon btn-link btn-github">
                   <i class="fa fa-github"></i>
-                </a>
-
-                <!-- Correo: lmbgott@gmail.com <br> -->
-                <br>
+                </a><br>
+                Correo:<a href="mailto:lmbgott@gmail.com?Subject=Hola%20mundo!" target="_top"> lmbgott@gmail.com</a><br>
                 Teléfono: +569 5629 65 99 <br>
                 Ubicación: Santiago de Chile <br>
                 <a href="curriculoLuisMiguelBravo20192803.pdf" target="_blank">Descargar archivo PDF</a>
-
                 <div style="background-image: url('qr20190330.png'); width: 200px; height: 200px; display: block; margin: 0 auto;"></div>
-
-
               </div>
-
             </div>
           </div>
         </div>
 
-
         <div ng-app="myApp">
             <div ng-controller='TimeCtrl'>
-
                 <div class="section section-tabs navbar-expand-lg" style="background-color: black;">
                     <div class="container">
                         <div class="row">
@@ -172,10 +158,6 @@
                                     </span>
                                 </div>
                             </div>
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -183,7 +165,7 @@
                 <!-- section section-tabs -->
                 <!-- section section-white-->
                 <div class="section"
-                    ng-class="{'section-tabs': ($index+1)%2 !== (filteredResults.length%2), 'section-white': ($index+1)%2 === (filteredResults.length%2) }" 
+                    ng-class="{'section-tabs': ($index+1)%2 !== (filteredResults.length%2), 'section-white': ($index+1)%2 === (filteredResults.length%2) }"
                     ng-repeat="empleo in filteredResults = (getEmpleos() | orderBy : '-inicio' | filter:infoEmpleo)">
                     <div class="container">
 
@@ -212,18 +194,18 @@
                         <div ng-bind-html="empleo.descripcion | resaltado:infoEmpleo"></div>
                         <div ng-bind-html="empleo.tecnologia | resaltado:infoEmpleo"></div>
                     </div>
-                  
+
                 </div>
 
                 <div class="section section-white">
                     <div class="container">
-                    </div> 
-                </div>
-
-                <div class="section section-signup page-header" style="background-image: url('./assets/img/city.jpg');">
-                    <div class="container">
                     </div>
                 </div>
+
+                <!--div class="section section-signup page-header" style="background-image: url('./assets/img/code-footer.png');">
+                    <div class="container">
+                    </div>
+                </div-->
 
             </div>
         </div>

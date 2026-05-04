@@ -110,16 +110,30 @@
                             </h3>
                         </div>
 
-                        <h4 style="font-weight: bold;">
-                            Inicio:
-                            <span ng-bind-html="empleo.inicio | date:'dd MMMM yyyy' | resaltado:infoEmpleo"></span>
+                        
+                          <table>
+                            <tr>
+                              <td style="text-align: right;">
+                                  <span style="font-weight: bold;" ng-bind-html="empleo.inicio | date:'dd MMMM yyyy' | resaltado:infoEmpleo"></span>
+                              </td>
+                              <td>
+                                <span>inicio</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: right;">
+                                  <span style="font-weight: bold;" ng-bind-html="empleo.fin | date:'dd MMMM yyyy' | resaltado:infoEmpleo"></span>
+                              </td>
+                              <td>
+                                <span>termino</span>
+                              </td>
+                            </tr>
+                          </table>
+                            
+                            
 
-                            <div ng-show="empleo.fin !== null">
-                                Termino:
-                                <span ng-bind-html="empleo.fin | date:'dd MMMM yyyy' | resaltado:infoEmpleo"></span>
-                                <span ng-if="empleo.fin === null"> Indefinido </span>
-                            </div>
-
+                            
+                            
                         </h4>
 
 
@@ -175,11 +189,11 @@
     var empleos = [
     {
         inicio: new Date("04/01/2021"), // mes / dia / year
-        fin: null,
+        fin: new Date("07/03/2026"), // mes / dia / year
         empresa: "Banco Ripley",
         cargo: "Desarrollador Full Stack Senior",
-        tecnologia: "Tecnologías usadas: Node, Angular, Ionic, Angular  Firebase",
-        descripcion: "Tecnologías usadas: Node, Angular, Ionic, Angular 18, Firebase, Go, PostgresSQL. Dentro del banco Ripley trabajo programando para la aplicación móvil del banco y la pagina web y en el backend, desarrollando nuevas funcionalidad que apoyan a los clientes del banco. "
+        tecnologia: "Tecnologías usadas:  Angular 18, Capacitor, Ionic, AWS | GCP, Node, Go, Firebase, PostgresSQL",
+        descripcion: "En el Banco Ripley, trabajé programando el frontend para la aplicación móvil (iOS y Android) y la página web, utilizando Angular con Ionic y Capacitor para compilar en Android, iOS y web (con el mismo código es posible desplegar en tres plataformas distintas).<br><br>También trabajé en el backend, desarrollando nuevos microservicios en Go (Golang) y conectándome a bases de datos NoSQL (Firebase), SQL (PostgreSQL y Oracle) y APIs REST de terceros. El objetivo fue crear nuevas funcionalidades que apoyaran a los clientes del banco, específicamente en el área de PAGOS PAT y PEC."
     },
     {
         inicio: new Date("01/04/2021"), // mes / dia / year
